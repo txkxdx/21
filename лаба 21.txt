@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+#include <Windows.h>
+using namespace std;
+
+int main()
+{
+	setlocale(0, "");
+	cout << "Введите 5 чисел: " << endl;
+	int a; cin >> a;
+	int b; cin >> b;
+	int c; cin >> c;
+	int d; cin >> d;
+	int e; cin >> e;
+	int table = 1;
+
+	int array1[5]{ a,b,c,d,e };
+	system("cls");
+	for (int i = 0; i < 5; i++) {
+		cout << "| Таблица: " << table << endl;
+		cout << "__________________________________________________" << endl;
+		cout << "| Число     |     Пример     |     Результат     |" << endl;
+		cout << "--------------------------------------------------" << endl;
+		cout << "|    " << array1[i] << "      |        " << array1[i] << "+" << array1[i] << "     |         " << array1[i] + array1[i] << "         |" << endl;
+		cout << "--------------------------------------------------" << endl;
+		cout << "|    " << array1[i] << "      |        " << array1[i] << "-" << array1[i] << "     |         " << array1[i] - array1[i] << "         |" << endl;
+		cout << "--------------------------------------------------" << endl;
+		cout << "|    " << array1[i] << "      |        " << array1[i] << "/" << array1[i] << "     |         " << array1[i] / array1[i] << "         |" << endl;
+		cout << "--------------------------------------------------" << endl;
+		cout << "|    " << array1[i] << "      |        " << array1[i] << "*" << array1[i] << "     |         " << array1[i] * array1[i] << "         |" << endl;
+		cout << "--------------------------------------------------" << endl;
+		table++;
+	}
+}
